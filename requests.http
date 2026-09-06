@@ -1,0 +1,94 @@
+GET http://localhost:8080/hotels
+
+###
+POST http://localhost:8080/hotels
+Content-Type: application/json
+
+{
+  "name": "Happy Hotel",
+  "city": "Kythira",
+  "stars": 2
+}
+
+###
+
+GET http://localhost:8080/hotels/10
+
+###
+
+POST http://localhost:8080/hotels
+Content-Type: application/json
+
+{
+  "name": "Impossible Hotel",
+  "city": "Athens",
+  "stars": 8
+}
+
+###
+
+POST http://localhost:8080/customers
+Content-Type: application/json
+
+{
+  "firstName": "koula",
+  "lastName": "Tragianou",
+  "email": "kikitsa@example.com"
+}
+
+###
+GET http://localhost:8080/customers/5
+
+###
+
+POST http://localhost:8080/reservations
+Content-Type: application/json
+
+{
+  "hotel": {
+    "id": 3
+  },
+  "customer": {
+    "id": 3
+  },
+  "checkIn": "2026-08-28",
+  "checkOut": "2026-08-29",
+  "totalPrice": 200.00,
+  "status": "ACTIVE"
+}
+
+###
+
+POST http://localhost:8080/reservations
+Content-Type: application/json
+
+{
+  "hotel": {
+    "id": 1
+  },
+  "customer": {
+    "id": 1
+  },
+  "checkIn": "2026-06-30",
+  "checkOut": "2026-07-05",
+  "totalPrice": -300.00,
+  "status": "ACTIVE"
+}
+
+###
+GET http://localhost:8080/reservations/999
+
+###
+GET http://localhost:8080/hotels
+###
+GET http://localhost:8080/hotels/2
+
+###
+PUT http://localhost:8080/hotels/3
+Content-Type: application/json
+
+{
+  "name": "Impossible Hotel 2",
+  "city": "Athens",
+  "stars": 1
+}
