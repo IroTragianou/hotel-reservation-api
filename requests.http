@@ -1,3 +1,5 @@
+// Additional API testing is performed using Postman.
+####
 GET http://localhost:8080/hotels
 
 ###
@@ -92,3 +94,6 @@ Content-Type: application/json
   "city": "Athens",
   "stars": 1
 }
+
+###
+GET http://localhost:8080/customers

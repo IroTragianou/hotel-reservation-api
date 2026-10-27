@@ -2,6 +2,7 @@ package com.hotelreservation.controller;
 
 import com.hotelreservation.entity.Reservation;
 import com.hotelreservation.service.ReservationService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class ReservationController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Reservation createReservation(@RequestBody Reservation reservation) {
         return reservationService.createReservation(reservation);
     }
